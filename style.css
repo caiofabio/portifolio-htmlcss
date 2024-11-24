@@ -1,0 +1,307 @@
+/* #GERAL Estilo geral */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  /* Cor do fundo do Site */
+  background-color: black;
+  height: 100vh;
+}
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto; /*Centralizar a div*/
+}
+
+.flex {
+  display: flex;
+}
+
+/* button */
+.btn-contato button {
+  /* Padding 10 para cima 40 lados */
+  padding: 10px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  /* Cor fundo do botao */
+  background-color: #ca1818;
+  /* remover efeito de borda */
+  border: 0px;
+  /* Deixar borda mais redonda */
+  border-radius: 30px;
+  /* Efeito passar mouse em cima virar outro cursor */
+  cursor: pointer;
+  /* Suavizar o movimento */
+  transition: 2s;
+}
+
+/* Todos os h2 com titulo */
+h2.titulo {
+  color: #fff;
+  font-size: 38px;
+  text-align: center;
+}
+
+h2.titulo span {
+  color: #ff0000;
+}
+
+/* Apontar para o button quando mouse em CIMA */
+.btn-contato button:hover {
+  /* 0cima 0lados 8espalhamentos lados red-cor do espalhamento */
+  box-shadow: 0px 0px 8px #ff0000;
+  transform: scale(1.10);
+}
+
+/* #HEADER Estilo do cabecalho */
+header {
+  /* 40px do Topo, 4% para as laterais */
+  padding: 40px 4%;
+}
+
+/* Este aponta somente para um filho direto de header, nao pode ser "neto" */
+header > .interface {
+  display: flex;  /* Coloca eles em linha */
+  align-items: center; /* Centraliza todos eles */
+  justify-content: space-between; /* Distribui no espaço disponivel */
+}
+
+header a{
+  /* Cor da letra do texto em <a */
+  color: #5c5c5c;
+  /* Remover linha abaixo dos textos */
+  text-decoration: none;
+  /*  */
+  display: inline-block;
+  /* Deixa efeito mais suave tempo para concluir o efeito*/
+  transition: .2s;
+}
+
+/* Estilo quando passar mouse por cima */
+header a:hover{
+  color: #fff;
+  /* Depende da implementacao de header a para convert para display inlineblock */
+  /* Scale pode ser bem ignorante cuidado com os valores */
+  transform: scale(1.10);
+}
+
+header nav ul {
+  /* Remover bolinhas da ul */
+  list-style-type: none;
+}
+
+header nav ul li {
+  /* Colocar os li em linha */
+  display: inline-block;
+  /* Padding 0 para cima 40 lados */
+  padding: 0 40px;
+}
+
+/* #MAIN Estilo Topo do Site */
+section.topo-do-site { /* Observe a juncao do . e section para apontar para ele proprio */
+  /* 40px do Topo, 4% para as laterais */
+  padding: 40px 8%;
+}
+
+section.topo-do-site {
+  /* Alinhar itens ao centro */
+  align-items: center;
+  justify-content: center;
+  /* Espaçamento entre os elementos */
+}
+
+section.topo-do-site .interface .flex {
+  /* Espaçamentos entre os elementos */
+  gap: 60px;
+}
+
+.topo-do-site .txt-topo-site h1 {
+  color: #fff;
+  font-size: 38px;
+  /* Espaço entre as linhas do proprio H1 */
+  line-height: 45px;
+}
+
+.topo-do-site .txt-topo-site h1 span {
+  color: red;
+}
+
+.topo-do-site .txt-topo-site p {
+  color: #fff;
+  margin: 40px 0px;
+}
+
+.topo-do-site .img-topo-site img{
+  /* Animacao so vai funcionar se position for diferente de static */
+  position: relative;
+  /* Nome animacao, tempo, movimentosuave, infinita, fazer-caminho contrario e nao corte */
+  animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* Animacoes */
+@keyframes flutuar {
+  /* Inicio */
+  0%{
+    top: 0;
+  }
+  /* fim */
+  100%{
+    top: 30px;
+  }
+}
+
+/* SECTION ESPECIALIDADE */
+section.especialidades {
+  padding: 40px 4%;
+}
+
+section.especialidades .interface .flex {
+  /* Espaçamentos entre os elementos */
+  gap: 60px;
+}
+
+/* Caixa dos elementos */
+section.especialidades .especialidade-box{
+  /* Distancia para titulo h2 */
+  margin-top: 45px;
+  color: #fff;
+  padding: 40px;  
+  /* Borda para ver o elemento */
+  border: 2px solid rgb(20, 20, 19);
+  /* Bordas redondas */
+  border-radius: 20px;
+  /* Suavizar o movimento de scale */
+  transition: .2s;
+}
+
+/* Mouse em cima e agora? */
+section.especialidades .especialidade-box:hover{
+ transform: scale(1.05);
+ box-shadow: 0 0 20px #ffffff75;
+}
+
+/* Controlar o Icone */
+section.especialidades .especialidade-box i{
+  font-size: 70px;
+  color: #ff0000;
+}
+
+section.especialidades .especialidade-box h3{
+  font-size: 28px;
+  margin: 15px 0px;
+}
+
+/* Google Fonts - Inicio */
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Google Fonts - Fim */
