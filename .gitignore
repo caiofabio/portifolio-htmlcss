@@ -1,0 +1,14 @@
+# Ignorar a pasta 'pasta_ignorada'
+images/
+
+# Ignorar todos os arquivos .log
+*.log
+
+# Ignorar arquivos temporários do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar arquivos compilados
+*.class
+*.o
+*.so
